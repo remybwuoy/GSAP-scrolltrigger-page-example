@@ -1,0 +1,103 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.bg-camou {
+    background: rgba(3, 16, 41, 0.267);
+}
+
+.navbar-collapse {
+    margin-top: 20px;
+    background: rgba(2, 12, 29, 0.507);
+}
+
+.section h1 {
+    font-size: 50px;
+    font-weight: 400;
+    font-family: monospace;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: auto;
+    top: 50%;
+    position: relative;
+    text-shadow: 2px 2px 2px rgb(41, 41, 41);
+}
+
+h1 img {
+    width: 100px;
+    height: 100px;
+}
+
+#container {
+    background: rgb(248, 244, 229);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-position: center;
+    height: 100vh;
+}
+
+.section {
+    height: 100%;
+    display: flex;
+}
+
+.start {
+    background-image: url(../imgs/imgside.jpeg);
+    color: cornsilk;
+    background-position: center;
+    width: 110%;
+}
+
+.gold {
+    background-image: url(../imgs/balloon.jpg);
+    color: rgb(255, 255, 255);
+    width: 110%;
+}
+
+.green {
+    background-image: url(../imgs/black1.jpeg);
+    color: rgb(255, 255, 255);
+    width: 110%;
+}
+
+.purple {
+    background-image: url(../imgs/b4.jpeg);
+    color: rgb(255, 255, 255);
+    width: 110%;
+}
+
+.blue {
+    background-image: url(../imgs/b7.jpeg);
+    color: rgb(255, 255, 255);
+    width: 120%;
+}
+
+
+@media (max-width: 991.98px) {
+    .offcanvas-collapse {
+        position: fixed;
+        top: 56px;
+        /* Height of navbar */
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        visibility: hidden;
+        background-color: #343a40;
+        transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    }
+
+    .offcanvas-collapse.open {
+        visibility: visible;
+        transform: translateX(-100%);
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gsap landing page 2</title>
+    <link rel="stylesheet" href="css/style2.css" />
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/CSSRulePlugin.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="section start">
+        <h1 >Scroll Down </br> <img class="text" src="imgs/ms.png" alt=""  class="img"/></h1>
+      </div>
+      <div class="section gold">
+       <h1> <img src="imgs/pl.png" alt=""  class="img"/></br>Keep Going</h1>
+      </div>
+      <div class="section green">
+        <h1>    <img src="imgs/straw.ico" alt=""  class="img"/></br>
+        Alittle Bit Further!</h1> 
+      </div>
+      <div class="section purple">
+        <h1>    <img src="imgs/rk.png" alt=""  class="img"/></br>
+        Almost There</h1> 
+      </div>
+      <div class="section blue">
+        <h1>   <img src="imgs/emoji.ico" alt=""  class="img"/></br>
+        You did it BUDDY!</h1> 
+      </div>
+    </div>
+
+    <!--content Delivery Network-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+    <script>
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      let container = document.getElementById("container");
+
+      gsap.to(container, {
+        x: () =>
+          -(container.scrollWidth - document.documentElement.clientWidth) +
+          "px",
+        ease: "none",
+        scrollTrigger: {
+          trigger: container,
+          invalidateOnRefresh: true,
+          pin: true,
+          scrub: 1,
+          end: () => "+=" + container.offsetWidth,
+        },
+      });
+    </script>
+  </body>
+</html>
