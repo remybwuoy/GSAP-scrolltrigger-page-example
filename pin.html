@@ -12,25 +12,25 @@
   <body>
     <div id="container">
       <div class="section start">
-        <h1 >Scroll Down </br> <img  src="imgs/ms.png" alt=""  class="img0"/></h1>
+        <h1 >Scroll Down </br> <img  src="imgs/ms.png" alt="scroll down"  class="img0"/></h1>
       </div>
       <div class="section gold">
-       <h1> <img src="imgs/pl.png" alt=""  class="img1"/></br>Keep Going</h1>
+       <h1> <img src="imgs/pl.png" alt="plane image"  class="img1"/></br>Keep Going</h1>
       </div>
       <div class="section green">
-        <h1>    <img src="imgs/straw.ico" alt=""  class="img2"/></br>
+        <h1>    <img src="imgs/straw.ico" alt="starwberry image"  class="img2"/></br>
         Alittle Bit Further!</h1> 
       </div>
       <div class="section purple">
-        <h1>    <img src="imgs/rk.png" alt=""  class="img3"/></br>
+        <h1>    <img src="imgs/rk.png" alt="image"  class="img3"/></br>
         Almost There</h1> 
       </div>
       <div class="section blue">
-        <h1>   <img src="imgs/emoji.ico" alt=""  class="img4"/></br>
+        <h1>   <img src="imgs/emoji.ico" alt="emoji"  class="img4"/></br>
         You did it BUDDY!</h1> 
       </div>
       <div class="section footer">
-        <h1>   <img src="imgs/aa.png" alt="" /></br>
+        <h1>   <img src="imgs/aa.png" alt="deadpool image" /></br>
         The End!</h1> 
       </div>
     </div>
@@ -67,7 +67,6 @@ gsap.utils.toArray(".section").forEach((section,  i) => {
     });
 });
 
-
 gsap.registerPlugin(ScrollTrigger);
 
   gsap.to(".img", {
@@ -82,18 +81,35 @@ gsap.registerPlugin(ScrollTrigger);
      rotation:360
 }); 
 
+// gsap.registerPlugin(ScrollTrigger);
+
+// gsap.to(".img1", {
+//     scrollTrigger: {
+//       trigger: ".gold",
+//       scrub:true,
+//       start: "top top",
+//     end: "+=400",
+//       toggleActions:"restart pause reverse pause"
+//     },
+//     duration: 6,
+//      x: 180,
+//     ease:"elastic",
+  
+// }); 
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".img1", {
     scrollTrigger: {
-      trigger: ".img1",
-      scrub:true,
-      toggleActions:"restart pause reverse pause"
+      trigger: ".gold",
+      markers: true,
+      start: "top top",
+      end: "+=800",
+      pin: ".gold",
+      scrub: 2,
     },
-    duration: 4,
-     x: 180,
-    // ease:"elastic",
-  
+      // duration: 6,
+      y: 200,
+      // ease:"elastic",
 }); 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -139,6 +155,7 @@ gsap.to(".img4", {
 
 }); 
     </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js" integrity="sha512-HYG9E+RmbXS7oy529Nk8byKFw5jqM3R1zzvoV2JnltsIGkK/AhZSzciYCNxDMOXEbYO9w6MJ6SpuYgm5PJPpeQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   </body>
 </html>
